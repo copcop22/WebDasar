@@ -7,7 +7,7 @@
 }
 
 body {
-    /* transform: scale(90%); */
+
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,6 +27,10 @@ body {
     align-items: center;
     background-color: white;
     color: #fff;
+}
+
+.navbar ul li.navbar-links:nth-last-child(1) {
+    padding-right: 0;
 }
 
 .navbar li {
@@ -67,12 +71,17 @@ body {
 @media (max-width: 600px) {
     .navbar ul {
         flex-wrap: wrap;
+
     }
 
     .navbar-links:hover a {
         display: block;
         transform: scale(120%);
         transition: 0.2s ease;
+    }
+
+    .navbar ul li.navbar-links:nth-last-child(1) {
+        padding: 16px;
     }
 
     .navbar-toggle {
@@ -138,7 +147,7 @@ div.hero-bg {
 
 }
 
-div.header-content {
+div.header-content-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,9 +157,8 @@ div.header-content {
     height: auto;
 }
 
-aside {
+div.header-content-right {
 
-    margin: 0 0;
     width: 100%;
     height: auto;
 }
@@ -162,7 +170,6 @@ header h1#header1 {
 
 }
 
-div.header-container {}
 
 p#sub-header1 {
     margin: 35px 0;
@@ -172,6 +179,8 @@ p#sub-header1 {
 .btn-order {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
 }
 
 img#btn-how-order {
@@ -210,12 +219,12 @@ h1#about-header {
 
 }
 
-article#about {
+article#about-left {
 
     min-width: 50%;
 }
 
-aside#about-aside {
+aside#about-right {
     width: auto;
     height: auto;
     position: relative;
@@ -292,10 +301,11 @@ div.services-bg {
 }
 
 .card {
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+
     height: 19em;
     width: auto;
     padding: 16px;
+
     text-align: center;
     background-color: #fff;
     border-radius: 30px;
@@ -343,17 +353,17 @@ h1#contact-header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-
+    height: 25em;
 }
 
 
-article#contact {
+article#contact-left {
 
     width: 50%;
 
 }
 
-aside#contact-aside {
+article#contact-right {
     width: 50%;
     padding: 0 1em 0 0;
     position: relative;
@@ -391,22 +401,27 @@ p#contact-p {
     padding: 1em 0;
 }
 
+table#biodata th {
+    padding: 1px 0.5em;
+    text-align: left;
+}
+
 @media (max-width: 600px) {
     .contact-flex {
         display: flex;
         flex-direction: column-reverse;
         align-content: center;
-
+        height: auto;
         ;
     }
 
-    article#contact {
+    article#contact-left {
 
         width: 100%;
 
     }
 
-    aside#contact-aside {
+    article#contact-right {
         width: 100%;
         padding: 0 1em 0 0;
         position: relative;
@@ -454,7 +469,7 @@ p#contact-p {
     display: flex;
     justify-content: space-between;
     background-color: #423F3E;
-    height: 20em;
+    height: 5em;
 }
 
 .footer-bg {
