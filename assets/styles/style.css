@@ -3,11 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: solid 1px red; */
+
 }
 
-body {
-
+body,
+html {
+    scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,9 +17,23 @@ body {
 .container {
     width: 90%;
     height: auto;
-    /* background-color: grey; */
     margin: 0 auto;
 
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 60px;
+    z-index: 100;
+
+}
+
+main {
+    margin-top: 5em;
 }
 
 .navbar ul {
@@ -63,10 +78,7 @@ body {
     transition: 0.2s ease;
 }
 
-.navbar-links:hover {
-    /* background-color: #423F3E; */
-
-}
+.navbar-links:hover {}
 
 @media (max-width: 600px) {
     .navbar ul {
@@ -108,6 +120,8 @@ body {
     }
 }
 
+
+
 /* Hero Section */
 
 @media (max-width: 600px) {
@@ -139,7 +153,7 @@ body {
     justify-content: space-between;
     background-color: #423F3E;
     height: 100%;
-    /* transform: scale(90%); */
+
 }
 
 div.hero-bg {
@@ -181,11 +195,20 @@ p#sub-header1 {
     flex-wrap: wrap;
     justify-content: space-around;
     height: auto;
+
 }
+
+.btn-order a {
+    align-items: center;
+}
+
+
 
 img#btn-how-order {
     width: 100%;
+
 }
+
 
 img#btn-order {
     width: 100%;
@@ -229,11 +252,12 @@ aside#about-right {
     height: auto;
     position: relative;
 
+
 }
 
 img.about-img {
     width: 100%;
-
+    border-radius: 20px;
 
 }
 
@@ -288,12 +312,12 @@ div.services-bg {
     padding: 0 10px;
 }
 
-/* Remove extra left and right margins, due to padding */
+
 .row {
     margin: 0 -5px;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
@@ -317,7 +341,7 @@ img.services-img {
     height: 7em;
 }
 
-/* Responsive columns */
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
@@ -326,13 +350,9 @@ img.services-img {
     }
 
     .card {
-        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+
         height: 15em;
-        /* width: auto;
-        padding: 16px;
-        text-align: center;
-        background-color: #fff;
-        border-radius: 30px; */
+
     }
 }
 
@@ -477,19 +497,9 @@ table#biodata th {
     background-color: #423F3E;
 }
 
-/* Style the counter cards */
-
-/* .flex-container {
-    display: flex;
-    justify-content: center;
-    background-color: DodgerBlue;
-}
-
-.flex-container>div {
-    background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
+.footer h3 {
+    color: #fff;
+    margin: auto;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-} */
+    font-size: 0.9em;
+}
